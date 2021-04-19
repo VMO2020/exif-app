@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "vmog-app"
+  },
+  "targets": {
+    "vmog-app": {
+      "hosting": {
+        "vmog": [
+          "vmog-app"
+        ],
+        "exif": [
+          "exif-app"
+        ]
+      }
+    }
+  }
+}
