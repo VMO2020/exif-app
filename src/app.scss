@@ -62,9 +62,8 @@
 				@include font-size(20px, 28px);
 				text-transform: uppercase;
 				font-weight: 700;
-				padding: 0.3em;
 				margin: 0;
-				// line-height: 2em;
+				padding: 0.2em 0;
 				display: flex;
 				align-items: center;
 				justify-content: center;
@@ -111,6 +110,7 @@
 		margin-bottom: 2px;
 
 		a {
+			@include font-size(16px, 28px);
 			margin: 0;
 			text-decoration: none;
 			cursor: pointer;
@@ -121,6 +121,7 @@
 			}
 		}
 		p {
+			@include font-size(16px, 28px);
 			margin: 0;
 		}
 	}
@@ -147,10 +148,6 @@
 			.data-container {
 				width: calc(100% + 4em);
 				margin-left: -4em;
-			}
-
-			.label-container {
-				padding: 0 4em;
 			}
 		}
 	}

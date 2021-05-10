@@ -37,9 +37,11 @@
 .btn-click {
 	@include font-size(16px, 24px);
 	margin: 0em 1em 1em;
-	padding: 0.3em 1em;
+	padding: 0.2em 1em;
 	color: white;
-	display: inline-block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background: $mainColor;
 	box-shadow: $btn-shadow;
 	border: 2px solid white;
@@ -52,6 +54,7 @@
 	svg {
 		@include size(28px, 36px, 1, 1);
 		margin-right: 0.8em;
+		fill: white;
 	}
 
 	&:active {

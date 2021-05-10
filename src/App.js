@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { Share } from './components/Share';
 
 // Icons
-import { ReactComponent as Icon1 } from './icons/photo.svg';
+import { ReactComponent as Icon1 } from './icons/image.svg';
 
 // Styles
 import './app.scss';
@@ -85,7 +85,7 @@ function App() {
 				<div className='label-container'>
 					<label htmlFor='uploader' className='btn-click'>
 						<Icon1 />
-						<span>Choose a Photo</span>
+						<span>Choose a Image</span>
 					</label>
 				</div>
 				<hr />
