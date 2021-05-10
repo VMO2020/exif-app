@@ -3,6 +3,9 @@ import React, { useEffect, useState } from 'react';
 // Components
 import { Share } from './components/Share';
 
+// Icons
+import { ReactComponent as Icon1 } from './icons/photo.svg';
+
 // Styles
 import './app.scss';
 
@@ -80,7 +83,8 @@ function App() {
 					onChange={handleInputChange}
 				/>
 				<div className='label-container'>
-					<label htmlFor='uploader' className='btn btn-mobile'>
+					<label htmlFor='uploader' className='btn-click'>
+						<Icon1 />
 						<span>Choose a Photo</span>
 					</label>
 				</div>
