@@ -10,7 +10,7 @@ import './share.scss';
 
 export const Share = ({ url }) => {
 	return (
-		<div className='social-share'>
+		<section className='social-share'>
 			<div
 				className='fb-share-button'
 				data-href={`https://${url}`}
@@ -21,14 +21,14 @@ export const Share = ({ url }) => {
 					target='_blank'
 					rel='noreferrer'
 					href={`https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2F.${url}%2F&amp;src=sdkpreparse`}
-					className='btn btn-social btn-facebook'
+					className='btn btn__social btn__facebook'
 				>
 					<Icon2 /> Share
 				</a>
 			</div>
 
 			<a
-				className='btn btn-social btn-whatsapp'
+				className='btn btn__social btn__whatsapp'
 				rel='noreferrer'
 				data-action='share/whatsapp/share'
 				href={`whatsapp://send?text=https%3A%2F%2F${url}/`}
@@ -37,13 +37,13 @@ export const Share = ({ url }) => {
 			</a>
 
 			<a
-				className='btn btn-social btn-twitter'
+				className='btn btn__social btn__twitter'
 				target='_blank'
 				rel='noreferrer'
 				href={`https://twitter.com/intent/tweet?text=https://${url}/`}
 			>
 				<Icon3 /> Tweet
 			</a>
-		</div>
+		</section>
 	);
 };

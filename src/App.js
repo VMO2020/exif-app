@@ -83,7 +83,7 @@ function App() {
 					onChange={handleInputChange}
 				/>
 				<div className='label-container'>
-					<label htmlFor='uploader' className='btn-click'>
+					<label htmlFor='uploader' className='btn__click'>
 						<Icon1 />
 						<span>Choose a Image</span>
 					</label>
