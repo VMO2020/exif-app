@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { Share } from './components/Share';
 
 // Icons
-import { ReactComponent as Icon1 } from './icons/image.svg';
+import { ReactComponent as Icon1 } from './assets/icons/image.svg';
 
 // Styles
 import './app.scss';

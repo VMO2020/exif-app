@@ -1,9 +1,9 @@
 import React from 'react';
 
 // Icons
-import { ReactComponent as Icon1 } from '../icons/share/whatsapp.svg';
-import { ReactComponent as Icon2 } from '../icons/share/facebook.svg';
-import { ReactComponent as Icon3 } from '../icons/share/twitter.svg';
+import { ReactComponent as Icon1 } from '../assets/icons/share/whatsapp.svg';
+import { ReactComponent as Icon2 } from '../assets/icons/share/facebook.svg';
+import { ReactComponent as Icon3 } from '../assets/icons/share/twitter.svg';
 
 // Styles
 import './share.scss';
