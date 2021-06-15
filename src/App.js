@@ -125,7 +125,7 @@ function App() {
 				<p>
 					{' '}
 					<a href='https://vmog.net/' target='_blank' rel='noreferrer'>
-						Copyright © and web design by VMOG
+						Copyright and web design by © VMOG
 					</a>
 				</p>
 				<p> Liverpool UK 2021 </p>
