@@ -51,12 +51,10 @@ function App() {
 	};
 
 	useEffect(() => {
-		{
-			previewIMG &&
-				exifr
-					.parse(`${previewIMG}`, { userComment: true, xmp: true })
-					.then((output) => setDataValue(output));
-		}
+		previewIMG &&
+			exifr
+				.parse(`${previewIMG}`, { userComment: true, xmp: true })
+				.then((output) => setDataValue(output));
 	}, [previewIMG]);
 
 	return (
@@ -94,9 +92,7 @@ function App() {
 					{previewIMG && (
 						<pre>
 							<img src={`${img}`} id='img1' alt='File type not supported' />
-							<p>
-								Name: {imgName} Size: {Math.trunc(imgSize / 1000)} KB
-							</p>
+							<p>Name: {imgName}</p>
 							{dataValue && (
 								<>
 									<p>
@@ -107,6 +103,7 @@ function App() {
 										{Math.trunc(1 / dataValue.ExposureTime)} FL:{' '}
 										{dataValue.FocalLength}mm{' '}
 									</p>
+									<p>Size: {Math.trunc(imgSize / 1000)} KB</p>
 								</>
 							)}
 						</pre>
