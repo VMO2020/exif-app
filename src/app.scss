@@ -1,156 +1,160 @@
-@import './styles/styles.scss';
+@import "./styles/styles.scss";
 
 .exif {
-	width: 100%;
-	margin-top: 0.5em;
-	overflow: hidden;
-	background-color: $Light;
-	box-shadow: 5px 5px 10px rgba(250, 250, 250, 0.3);
+  width: 100%;
+  margin-top: 0.5em;
+  overflow: hidden;
+  background-color: $Light;
+  box-shadow: 5px 5px 10px rgba(250, 250, 250, 0.3);
 
-	.title {
-		@include font-size(28px, 60px);
-		width: 100%;
-		font-weight: 700;
-		line-height: 2em;
-		color: $Light;
-		background-color: $Dark;
-		text-align: center;
-		box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
-		margin-top: 2px;
-	}
+  .title {
+    @include font-size(28px, 50px);
+    width: 100%;
+    font-weight: 700;
+    line-height: 2em;
+    color: $Light;
+    background-color: $mainDark;
+    text-align: center;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+    margin-top: 2px;
+  }
 
-	.image-picker {
-		width: 100%;
-		min-height: 76vh;
-		background-color: $Light;
-		text-align: center;
+  .image-picker {
+    width: 100%;
+    min-height: 76vh;
+    background-color: $Light;
+    text-align: center;
 
-		h1 {
-			@include font-size(18px, 34px);
-			color: $Dark;
-			padding: 1em;
-			margin: 1em 1em;
-			font-weight: 500;
-			box-shadow: $card-shadow;
-			border-radius: 8px;
-		}
-		h3 {
-			color: lighten($Dark, 20%);
-			// margin-bottom: 0.8em;
-		}
+    h1 {
+      @include font-size(18px, 24px);
+      color: $Dark;
+      padding: 1em;
+      margin: 1em 1em;
+      font-weight: 500;
+      box-shadow: $card-shadow;
+      border-radius: 8px;
+    }
+    h3 {
+      color: lighten($Dark, 20%);
+      // margin-bottom: 0.8em;
+    }
 
-		input[type='file'] {
-			display: none;
-		}
+    input[type="file"] {
+      display: none;
+    }
 
-		.social-share {
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-			flex-wrap: wrap;
-			margin: 0;
-			margin-bottom: 0.5em;
-		}
+    .social-share {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 0;
+      margin-bottom: 0.5em;
+    }
 
-		.social-share > * {
-			margin-bottom: 1em;
-		}
+    .social-share > * {
+      margin-bottom: 1em;
+    }
 
-		.label-container {
-			padding: 0 2em;
-			margin-bottom: 1em;
+    .label-container {
+      padding: 0 2em;
+      margin-bottom: 1em;
 
-			label {
-				@include font-size(20px, 28px);
-				text-transform: uppercase;
-				font-weight: 700;
-				margin: 0;
-				padding: 0.2em 0;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-			}
-		}
+      label {
+        @include font-size(20px, 28px);
+        text-transform: uppercase;
+        font-weight: 700;
+        margin: 0;
+        padding: 0.2em 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
 
-		.image-container {
-			width: 98%;
-			margin: auto;
+    .image-container {
+      width: 98%;
+      margin: auto;
 
-			img {
-				width: 100%;
-			}
+      img {
+        width: 100%;
+      }
 
-			p {
-				@include font-size(14px, 28px);
-				// border: 2px solid $Dark;
-				margin: 0.1em auto;
-			}
-		}
+      p {
+        @include font-size(14px, 28px);
+        // border: 2px solid $Dark;
+        margin: 0.1em auto;
+      }
+    }
 
-		.data-container {
-			width: calc(100% + 3em);
-			margin-left: -3em;
-			padding: 0;
-			display: flex;
-			justify-content: left;
-			overflow: hidden;
+    .link {
+      margin: 2em auto;
+    }
 
-			p {
-				@include font-size(12px, 20px);
-				color: $Dark;
-				height: 100%;
-				border: none;
-				text-align: left;
-			}
-		}
-	}
-	footer {
-		color: $Light;
-		background-color: $Dark;
-		text-align: center;
-		padding: 0.8em 0;
-		margin-bottom: 2px;
+    .data-container {
+      width: calc(100% + 3em);
+      margin-left: -3em;
+      padding: 0;
+      display: flex;
+      justify-content: left;
+      overflow: hidden;
 
-		a {
-			@include font-size(16px, 28px);
-			margin: 0;
-			text-decoration: none;
-			cursor: pointer;
-			color: $Light;
+      p {
+        @include font-size(12px, 20px);
+        color: $Dark;
+        height: 100%;
+        border: none;
+        text-align: left;
+      }
+    }
+  }
+  footer {
+    color: $Light;
+    background-color: $mainDark;
+    text-align: center;
+    padding: 0.8em 0;
+    margin-bottom: 2px;
 
-			&:hover {
-				color: darken($mainColor, 10%);
-			}
-		}
-		p {
-			@include font-size(16px, 28px);
-			margin: 0;
-		}
-	}
+    a {
+      @include font-size(16px, 28px);
+      margin: 0;
+      text-decoration: none;
+      cursor: pointer;
+      color: $Light;
+
+      &:hover {
+        color: darken($mainColor, 10%);
+      }
+    }
+    p {
+      @include font-size(16px, 28px);
+      margin: 0;
+    }
+  }
 }
 // FOR TABLETS & DESKTOP
 @include mQ(768px) {
-	.exif {
-		.image-picker {
-			margin: 0;
+  .exif {
+    .image-picker {
+      margin: 0;
 
-			.image-container {
-				width: 100%;
+      .image-container {
+        width: 100%;
 
-				img {
-					width: 95%;
-					box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
-				}
+        img {
+          width: 95%;
+          box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+        }
 
-				p {
-					width: 95%;
-				}
-			}
+        p {
+          width: 95%;
+        }
+      }
 
-			.data-container {
-				width: calc(100% + 4em);
-				margin-left: -4em;
-			}
-		}
-	}
+      .data-container {
+        width: calc(100% + 4em);
+        margin-left: -4em;
+      }
+    }
+  }
 }

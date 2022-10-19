@@ -11,14 +11,15 @@ $Danger: rgb(255, 59, 48); // Apple System Red Light
 $Amazon: #ff9900;
 
 // Main Color HSL(hue(color), saturation, lightness)
-$mainDark: hsl(210, 100%, 42%);
+// $mainDark: hsl(210, 100%, 42%);
+$mainDark: DodgerBlue;
 $mainMDark: hsl(210, 100%, 52%); // Apple System Blue Dark
 $mainColor: hsl(210, 100%, 62%);
 $mainLight: hsl(210, 100%, 71%);
 
 // Font-Family
-$font-family: 'Arial Narrow', 'Arial', 'sans-serif';
-$font-family-title: 'Optima', 'Arial', 'sans-serif';
+$font-family: "Arial Narrow", "Arial", "sans-serif";
+$font-family-title: "Optima", "Arial", "sans-serif";
 
 // SHADOWS
 $shadow: 0 0 1em rgba(0, 0, 0, 0.25);
@@ -27,63 +28,63 @@ $btn-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 $btn-shadow-click: 2px 2px 10px rgba(0, 0, 0, 0.5);
 
 html {
-	scroll-behavior: smooth;
-	scroll-padding: 90px;
+  scroll-behavior: smooth;
+  scroll-padding: 90px;
 }
 
 body {
-	box-sizing: border-box;
-	width: 100%;
-	max-width: $maxWidth;
-	margin: 0 auto;
-	padding: 0;
-	height: 100%;
-	font-family: $font-family;
-	background: #000000; /* fallback for old browsers */
-	background: -webkit-linear-gradient(
-		to right,
-		#434343,
-		#000000
-	); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(
-		to right,
-		#434343,
-		#000000
-	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  box-sizing: border-box;
+  width: 100%;
+  max-width: $maxWidth;
+  margin: 0 auto;
+  padding: 0;
+  height: 100%;
+  font-family: $font-family;
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-	.general__container {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		position: relative;
-		padding: 0;
-		overflow: hidden;
-		// border: 2px solid violet;
+  .general__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+    // border: 2px solid violet;
 
-		header {
-			margin: 0;
-			padding: 0;
-			width: 100%;
-		}
+    header {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
 
-		main {
-			margin: 0;
-			padding: 0.5rem 1rem;
-			width: 100%;
-			// border: 2px solid blue;
-		}
+    main {
+      margin: 0;
+      padding: 0.5rem 1rem;
+      width: 100%;
+      // border: 2px solid blue;
+    }
 
-		footer {
-			margin: 0;
-			padding: 0;
-			width: 100%;
-			// border: 2px solid green;
-		}
-	}
+    footer {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      // border: 2px solid green;
+    }
+  }
 
-	@include mobile {
-	}
+  @include mobile {
+  }
 
-	@include laptop {
-	}
+  @include laptop {
+  }
 }
