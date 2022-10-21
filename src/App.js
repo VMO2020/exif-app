@@ -23,10 +23,6 @@ function App() {
 	const handleInputChange = (e) => {
 		const reset = '';
 		setPreviewIMG(reset);
-		// Scroll to image
-		document
-			.getElementById('photo')
-			.scrollIntoView({ behavior: 'smooth', block: 'start' }, true);
 
 		// Get the image selected mobile friendly
 		setIMG(URL.createObjectURL(e.target.files[0]));
@@ -52,6 +48,17 @@ function App() {
 			setImgName(reader.name);
 			setImgSize(reader.size);
 		};
+
+		// Scroll to image
+		handlescroll();
+	};
+
+	const handlescroll = () => {
+		setTimeout(() => {
+			document
+				.getElementById('photo')
+				.scrollIntoView({ behavior: 'smooth', block: 'start' }, true);
+		}, 500);
 	};
 
 	useEffect(() => {
@@ -199,7 +206,7 @@ function App() {
 						Copyright and web design by © VMOG
 					</a>
 				</p>
-				<p> Liverpool UK 2021 </p>
+				<p> Liverpool UK 2022 </p>
 			</footer>
 		</div>
 	);
