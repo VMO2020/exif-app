@@ -75,7 +75,7 @@ function App() {
 	return (
 		<div className='.general__container exif'>
 			<div className='title'>
-				<span>Image metadata and EXIF data viewer</span>
+				<h1>Image metadata and EXIF data viewer</h1>
 			</div>
 
 			<section className='image-picker'>
@@ -84,7 +84,7 @@ function App() {
 						<input type='radio' name='accordion' id='first' defaultChecked />
 						<label htmlFor='first'>EXIF data viewer online</label>
 						<div className='content'>
-							<h1>
+							<p>
 								"EXIF Image Data or EXIF Photography Data can be an important
 								source of knowledge for discovering how photographers capture
 								images and what tools they use in the process. It is a set of
@@ -92,14 +92,14 @@ function App() {
 								who created them, when and for what, image size, camera or
 								mobile model, lens aperture "f", shutter speed "S", ISO
 								sensitivity, GPS data, date and more."
-							</h1>
+							</p>
 						</div>
 					</li>
 					<li>
 						<input type='radio' name='accordion' id='second' />
 						<label htmlFor='second'>Metadata viewer online</label>
 						<div className='content'>
-							<h2>
+							<p>
 								"Image metadata, or photo metadata, summarizes basic information
 								about the image, making it easy to find and work with particular
 								instances of data. The metadata can be created manually to be
@@ -107,19 +107,19 @@ function App() {
 								information, for example: The name of the author of the image,
 								the copyright of the photo, the date of creation of the image,
 								the date of modification of the image, the photo and the file
-								size, etc.."
-							</h2>
+								size, etc."
+							</p>
 						</div>
 					</li>
 					<li>
 						<input type='radio' name='accordion' id='third' />
 						<label htmlFor='third'>XMP data viewer online</label>
 						<div className='content'>
-							<h2>
+							<p>
 								"The XMP files data store changes made to your image in
 								post-processing. Extracted XMP tags are grouped by namespace.
 								Each one is separate object in output."
-							</h2>
+							</p>
 						</div>
 					</li>
 					<li>

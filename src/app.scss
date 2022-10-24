@@ -8,15 +8,17 @@
   box-shadow: 5px 5px 10px rgba(250, 250, 250, 0.3);
 
   .title {
-    @include font-size(22px, 50px);
-    width: 100%;
-    font-weight: 700;
-    line-height: 2em;
-    color: $Light;
-    background-color: $mainDark;
-    text-align: center;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
-    margin-top: 2px;
+    h1{
+      @include font-size(22px, 50px);
+      width: 100%;
+      font-weight: 700;
+      line-height: 2em;
+      color: $Light;
+      background-color: $mainDark;
+      text-align: center;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+      margin-top: 2px;
+    }
   }
 
   .image-picker {
@@ -63,18 +65,14 @@
           overflow: hidden;
           transition: max-height 0.5s, padding 0.5s;
 
-          h1, h2, p{
+          p{
             @include font-size(18px, 24px);
             color: $MedDark;
             padding: 0 0.5em;
             margin: 0.3em 0.3em;
             line-height:1.1em;
             font-weight: 500;
-          }
-
-          p{
             text-align: left;
-            padding: 0.5;
           }
           
         }
