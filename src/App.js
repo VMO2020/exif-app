@@ -2,6 +2,10 @@ import React, { useEffect, useState } from 'react';
 
 // Components
 import { Share } from './components/Share';
+import { AppText } from './components/AppText';
+
+// Hooks
+import { useDevice } from '../src/hooks/useDevice';
 
 // Icons
 import { ReactComponent as Icon1 } from './assets/icons/image.svg';
@@ -18,6 +22,9 @@ function App() {
 	const [img, setIMG] = useState('');
 	const [imgName, setImgName] = useState('');
 	const [imgSize, setImgSize] = useState('');
+
+	// const { width, height, device, lang, mode, userLang } = useDevice();
+	const { device } = useDevice(); // device = mobile, tablet or desktop
 
 	// INPUT IMAGE
 	const handleInputChange = (e) => {
@@ -61,6 +68,32 @@ function App() {
 		}, 500);
 	};
 
+	function toggleFullScreen() {
+		if (!document.fullscreenElement) {
+			openFullscreen();
+		}
+	}
+
+	// View in fullscreen
+	function openFullscreen() {
+		// Get the documentElement (<html>) to display the page in fullscreen */
+		const elem = document.documentElement;
+
+		if (elem.requestFullscreen) {
+			// Full screen
+			elem.requestFullscreen();
+		} else if (elem.mozRequestFullScreen) {
+			// Full screen in Firefox
+			elem.mozRequestFullScreen();
+		} else if (elem.webkitRequestFullscreen) {
+			// Full screen in Chrome, Safari y Opera
+			elem.webkitRequestFullscreen();
+		} else if (elem.msRequestFullscreen) {
+			// Full screen in IE11 y Edge
+			elem.msRequestFullscreen();
+		}
+	}
+
 	useEffect(() => {
 		window.scrollTo({ top: 0, behavior: 'smooth' });
 	}, []);
@@ -76,65 +109,17 @@ function App() {
 		<div className='.general__container exif'>
 			<div className='title'>
 				<h1>Image metadata and EXIF data viewer</h1>
+				{device === 'mobile' && (
+					<button className='btn' onClick={toggleFullScreen}>
+						Full Screen
+					</button>
+				)}
 			</div>
 
 			<section className='image-picker'>
-				<ul className='accordion'>
-					<li>
-						<input type='radio' name='accordion' id='first' defaultChecked />
-						<label htmlFor='first'>EXIF data viewer online</label>
-						<div className='content'>
-							<p>
-								"EXIF Image Data or EXIF Photography Data can be an important
-								source of knowledge for discovering how photographers capture
-								images and what tools they use in the process. It is a set of
-								photo data that describes and gives details about the rights,
-								who created them, when and for what, image size, camera or
-								mobile model, lens aperture "f", shutter speed "S", ISO
-								sensitivity, GPS data, date and more."
-							</p>
-						</div>
-					</li>
-					<li>
-						<input type='radio' name='accordion' id='second' />
-						<label htmlFor='second'>Metadata viewer online</label>
-						<div className='content'>
-							<p>
-								"Image metadata, or photo metadata, summarizes basic information
-								about the image, making it easy to find and work with particular
-								instances of data. The metadata can be created manually to be
-								more precise or automatically and contain more basic
-								information, for example: The name of the author of the image,
-								the copyright of the photo, the date of creation of the image,
-								the date of modification of the image, the photo and the file
-								size, etc."
-							</p>
-						</div>
-					</li>
-					<li>
-						<input type='radio' name='accordion' id='third' />
-						<label htmlFor='third'>XMP data viewer online</label>
-						<div className='content'>
-							<p>
-								"The XMP files data store changes made to your image in
-								post-processing. Extracted XMP tags are grouped by namespace.
-								Each one is separate object in output."
-							</p>
-						</div>
-					</li>
-					<li>
-						<input type='radio' name='accordion' id='fourth' />
-						<label htmlFor='fourth'>Instructions</label>
-						<div className='content'>
-							<p>1.- Select an Image or Photograph.</p>
-							<p>
-								2.- The app will display the image, EXIF data, metadata and XMP
-								data.
-							</p>
-							<p>3.- Optional: You can go to RESIZE IMAGE link.</p>
-						</div>
-					</li>
-				</ul>
+				{/* <h3>{device}</h3> */}
+
+				<AppText />
 
 				<h3>Images: JPEG, JPG, PNG & TIFF</h3>
 
